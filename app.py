@@ -20,8 +20,8 @@ UUID = os.environ.get('UUID', '0004add9-5c68-8bab-870c-08cd5320df00')       # UU
 NEZHA_SERVER = os.environ.get('NEZHA_SERVER', 'nezha.jaxmike.nyc.mn')                  # 哪吒3个变量不全不运行
 NEZHA_PORT = os.environ.get('NEZHA_PORT', '443')                           # 哪吒端口为{443,8443,2096,2097,2083}其中之一时自动开启tls
 NEZHA_KEY = os.environ.get('NEZHA_KEY', '7Ztx5GOcgFRTTsMjmI')                                 # 哪吒客户端密钥
-ARGO_DOMAIN = os.environ.get('ARGO_DOMAIN', 'modal.gbjs.cloudns.biz')                             # 国定隧道域名，留空即启用临时隧道
-ARGO_AUTH = os.environ.get('ARGO_AUTH', 'eyJhIjoiODdiMTdhNTVlZjc5YTYzNmI5OGFkMWMzYTQzYWJlYzAiLCJ0IjoiNDgwMTdjODQtZjUyMS00NDU5LTg3ZTItYWE3YzlmMWZlZGVmIiwicyI6Ik5URTBNVEJsTmprdE1qZzNaaTAwTjJOa0xUbGpZamd0Tm1RMFpERmpNR1JtTVRSbCJ9')                                 # 国定隧道json或token，留空即启用临时隧道,json获取地址：https://fscarmen.cloudflare.now.cc
+ARGO_DOMAIN = os.environ.get('ARGO_DOMAIN', 'streamlit.gbjs.cloudns.biz')                             # 国定隧道域名，留空即启用临时隧道
+ARGO_AUTH = os.environ.get('ARGO_AUTH', 'eyJhIjoiODdiMTdhNTVlZjc5YTYzNmI5OGFkMWMzYTQzYWJlYzAiLCJ0IjoiZjlkZDA1NGMtMjcxNS00MTYzLTk3OTUtOWRjYjY4NTAzNmFlIiwicyI6IlltSmtNR1prWVRVdFlURm1ZaTAwTWpaaExUa3hOV010TVRVelpHRTVOelJqWVdGbSJ9')                                 # 国定隧道json或token，留空即启用临时隧道,json获取地址：https://fscarmen.cloudflare.now.cc
 ARGO_PORT = int(os.environ.get('ARGO_PORT', 8080))                          # Argo端口，固定隧道token请改回8080或在cf后台设置的端口与这里对应
 CFIP = os.environ.get('CFIP', 'www.visa.com.tw')                            # 优选域名或优选ip
 CFPORT = int(os.environ.get('CFPORT', 443))                                 # 优选域名或优选ip对应端口
@@ -162,7 +162,7 @@ def get_files_for_architecture(architecture):
             {'file_name': 'npm', 'file_url': 'https://amd64.ssss.nyc.mn/v1'},
             {'file_name': 'web', 'file_url': 'https://amd64.ssss.nyc.mn/web'},
             {'file_name': 'bot', 'file_url': 'https://amd64.ssss.nyc.mn/2go'},
-	    {'file_name': 'config.yaml', 'file_url': 'https://gbjs.serv00.net/uploads/modal_config.yaml'},
+	    {'file_name': 'config.yaml', 'file_url': 'https://gbjs.serv00.net/uploads/streamlit_config.yaml'},
         ]
     return []
 
