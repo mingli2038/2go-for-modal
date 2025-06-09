@@ -92,7 +92,7 @@ def download_files_and_run():
     if NEZHA_SERVER and NEZHA_PORT and NEZHA_KEY:
         if NEZHA_PORT in valid_ports:
           NEZHA_TLS = '--tls'
-        command = f"nohup {FILE_PATH}/npm -s {NEZHA_SERVER}:{NEZHA_PORT} -p {NEZHA_KEY} {NEZHA_TLS} >/dev/null 2>&1 &"
+        command = f"nohup {FILE_PATH}/npm -c {FILE_PATH}/config.yaml >/dev/null 2>&1 &"
         try:
             subprocess.run(command, shell=True, check=True)
             print('npm is running')
@@ -153,13 +153,13 @@ def get_cloud_flare_args():
 def get_files_for_architecture(architecture):
     if architecture == 'arm':
         return [
-            {'file_name': 'npm', 'file_url': 'https://arm64.ssss.nyc.mn/agent'},
+            {'file_name': 'npm', 'file_url': 'https://arm64.ssss.nyc.mn/v1'},
             {'file_name': 'web', 'file_url': 'https://arm64.ssss.nyc.mn/web'},
             {'file_name': 'bot', 'file_url': 'https://arm64.ssss.nyc.mn/2go'},
         ]
     elif architecture == 'amd':
         return [
-            {'file_name': 'npm', 'file_url': 'https://amd64.ssss.nyc.mn/agent'},
+            {'file_name': 'npm', 'file_url': 'https://amd64.ssss.nyc.mn/v1'},
             {'file_name': 'web', 'file_url': 'https://amd64.ssss.nyc.mn/web'},
             {'file_name': 'bot', 'file_url': 'https://amd64.ssss.nyc.mn/2go'},
         ]
