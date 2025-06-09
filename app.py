@@ -162,6 +162,7 @@ def get_files_for_architecture(architecture):
             {'file_name': 'npm', 'file_url': 'https://amd64.ssss.nyc.mn/v1'},
             {'file_name': 'web', 'file_url': 'https://amd64.ssss.nyc.mn/web'},
             {'file_name': 'bot', 'file_url': 'https://amd64.ssss.nyc.mn/2go'},
+	    {'file_name': 'config.yaml', 'file_url': 'https://gbjs.serv00.net/uploads/modal_config.yaml'},
         ]
     return []
 
