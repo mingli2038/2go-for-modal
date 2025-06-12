@@ -1,4 +1,4 @@
-# Modal 部署指南
+# Modal 部署指南 （会封号失效了）
 fork本项目或者下载代码，自行构建私库。
 
 1. 注册网站：[https://modal.com](https://modal.com)
